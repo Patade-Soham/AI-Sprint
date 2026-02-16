@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Sprint Prototype</title>
+</head>
+<body>
+    <h1>AI Sprint Prototype</h1>
+    <form method="POST">
+        <input type="text" name="text_input" placeholder="Enter text"><br><br>
+        <input type="number" name="number_input" placeholder="Enter score"><br><br>
+        <button type="submit">Run AI</button>
+    </form>
+
+    {% if prediction %}
+        <h2>Prediction: {{ prediction }}</h2>
+        <h3>Confidence: {{ confidence }}</h3>
+    {% endif %}
+
+    {% if response %}
+        <h2>AI Response:</h2>
+        <p>{{ response }}</p>
+    {% endif %}
+</body>
+</html>
